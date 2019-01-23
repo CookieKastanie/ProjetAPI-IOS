@@ -30,11 +30,11 @@
         '.$this->table.'.idNiveau,
         dateCours,
         etat,
-        matieres.libelle as matiere, niveaux.libelle as niveau
+        MATIERES.libelle as matiere, NIVEAUX.libelle as niveau
       FROM
         ' . $this->table .'
-        inner join matieres on '.$this->table.'.idMat=matieres.idMat
-        inner join niveaux on '.$this->table.'.idNiveau=niveaux.idNiveau';
+        inner join MATIERES on '.$this->table.'.idMat=MATIERES.idMat
+        inner join NIVEAUX on '.$this->table.'.idNiveau=NIVEAUX.idNiveau';
 
       // Prepare statement
       $stmt = $this->conn->prepare($query);
@@ -54,11 +54,11 @@
           '.$this->table.'.idNiveau,
           dateCours,
           etat,
-          matieres.libelle as matiere, niveaux.libelle as niveau
+          MATIERES.libelle as matiere, NIVEAUX.libelle as niveau
         FROM
           ' . $this->table . '
-          inner join matieres on '.$this->table.'.idMat=matieres.idMat
-          inner join niveaux on '.$this->table.'.idNiveau=niveaux.idNiveau
+          inner join MATIERES on '.$this->table.'.idMat=MATIERES.idMat
+          inner join NIVEAUX on '.$this->table.'.idNiveau=NIVEAUX.idNiveau
       WHERE mailEleve = ? AND mailProf = ? AND '.$this->table.'.idMat = ? AND '.$this->table.'.idNiveau = ? AND dateCours = ?
       LIMIT 0,1';
 

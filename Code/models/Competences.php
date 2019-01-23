@@ -26,11 +26,11 @@ class Competences {
         mailProf,
         '.$this->table.'.idMat,
         '.$this->table.'.idNiveau,
-        matieres.libelle as matiere, niveaux.libelle as niveau
+        MATIERES.libelle as matiere, NIVEAUX.libelle as niveau
       FROM
         ' . $this->table.'
-        inner join matieres on '.$this->table.'.idMat=matieres.idMat
-        inner join niveaux on '.$this->table.'.idNiveau=niveaux.idNiveau';
+        inner join MATIERES on '.$this->table.'.idMat=MATIERES.idMat
+        inner join NIVEAUX on '.$this->table.'.idNiveau=NIVEAUX.idNiveau';
 
         // Prepare statement
         $stmt = $this->conn->prepare($query);
@@ -47,11 +47,11 @@ class Competences {
         mailProf,
         '.$this->table.'.idMat,
         '.$this->table.'.idNiveau,
-        matieres.libelle as matiere, niveaux.libelle as niveau
+        MATIERES.libelle as matiere, NIVEAUX.libelle as niveau
       FROM
           ' . $this->table . '
-          inner join matieres on '.$this->table.'.idMat=matieres.idMat
-        inner join niveaux on '.$this->table.'.idNiveau=niveaux.idNiveau
+          inner join MATIERES on '.$this->table.'.idMat=MATIERES.idMat
+        inner join NIVEAUX on '.$this->table.'.idNiveau=NIVEAUX.idNiveau
       WHERE mailProf = ? AND '.$this->table.'.idMat = ? AND '.$this->table.'.idNiveau = ?
       LIMIT 0,1';
 
