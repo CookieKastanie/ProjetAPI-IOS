@@ -49,24 +49,21 @@ class ViewController: UIViewController {
         task.resume()
     }
     
-    /*func updateUI(_ photoInfo: PhotoInfo?){
-        if let info = photoInfo {
-            let url = info.url
-            
-            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let data = data {
-                    
-                    DispatchQueue.main.async {
-                        self.labelTitre.text = info.title
-                        self.image.image = UIImage(data: data)
-                        self.labelA.text = info.description
-                        self.labelB.text = info.copyright
-                    }
-                }
-            }
-            
-            task.resume()
-        }
-    }*/
+    // IMPORTANT SURTOUT A NE PAS SUPPRIMER
+    /*
+     let location = "some address, state, and zip"
+     let geocoder = CLGeocoder()
+     geocoder.geocodeAddressString(location) { [weak self] placemarks, error in
+         if let placemark = placemarks?.first, let location = placemark.location {
+         let mark = MKPlacemark(placemark: placemark)
+         if var region = self?.mapView.region {
+             region.center = location.coordinate
+             region.span.longitudeDelta /= 8.0
+             region.span.latitudeDelta /= 8.0
+             self?.mapView.setRegion(region, animated: true)
+             self?.mapView.addAnnotation(mark)
+             }
+         }
+     }*/
 }
 
