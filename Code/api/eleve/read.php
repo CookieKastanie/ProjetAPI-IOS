@@ -22,7 +22,6 @@
   if($num > 0) {
         // mat array
         $eleve_arr = array();
-        $eleve_arr['data'] = array();
 
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
           extract($row);
@@ -37,7 +36,7 @@
           );
 
           // Push to "data"
-          array_push($eleve_arr['data'], $eleve_item);
+          array_push($eleve_arr, $eleve_item);
         }
 
         // Turn to JSON & output

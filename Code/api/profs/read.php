@@ -22,7 +22,6 @@
   if($num > 0) {
         // prof array
         $prof_array = array();
-        $prof_array['data'] = array();
 
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
           extract($row);
@@ -35,7 +34,7 @@
           );
 
           // Push to "data"
-          array_push($prof_array['data'], $prof_item);
+          array_push($prof_array, $prof_item);
         }
 
         // Turn to JSON & output

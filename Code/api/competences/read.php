@@ -22,7 +22,6 @@
   if($num > 0) {
         // mat array
         $competences_arr = array();
-        $competences_arr['data'] = array();
 
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
           extract($row);
@@ -36,7 +35,7 @@
           );
 
           // Push to "data"
-          array_push($competences_arr['data'], $competences_item);
+          array_push($competences_arr, $competences_item);
         }
 
         // Turn to JSON & output

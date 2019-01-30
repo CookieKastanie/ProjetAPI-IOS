@@ -22,7 +22,6 @@
   if($num > 0) {
         // niv array
         $niv_arr = array();
-        $niv_arr['data'] = array();
 
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
           extract($row);
@@ -32,7 +31,7 @@
             'libelle' => $libelle
           );
           // Push to "data"
-          array_push($niv_arr['data'], $niv_item);
+          array_push($niv_arr, $niv_item);
         }
 
         // Turn to JSON & output
