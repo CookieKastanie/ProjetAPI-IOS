@@ -13,8 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        fetchPhotoInfos { (cours) in
-            print(cours)
+        fetchPhotoInfos { (prof) in
+            print(prof)
         }
     }
 
@@ -24,8 +24,10 @@ class ViewController: UIViewController {
     }
 
 
-    func fetchPhotoInfos(completion: @escaping (Cours?) -> Void) {
-        let url = URL(string: "http://www-etu.iut-bm.univ-fcomte.fr/~vramouss/Code/api/cours/read.php")!
+    func fetchPhotoInfos(completion: @escaping ([Eleve]?) -> Void) {
+        let monURL = URlHelper(objet: "eleve", methode: "read")
+        
+        //let url = URL(string: monURL.getURL())!
         
         /*let query: [String: String] = [
             "api_key": "abONaFIip0FrAmEcZLiXbZqIUw2r7dOUPmRFWZMN"/*,
@@ -35,11 +37,10 @@ class ViewController: UIViewController {
         
         let url = baseURL.withQueries(query)!*/
         
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: monURL.getURL()) { (data, response, error) in
             let jsonDecoder = JSONDecoder()
-            print(data)
-            if let data = data, let cours = try? jsonDecoder.decode([Cours].self, from: data) {
-                completion(cours)
+            if let data = data, let prof = try? jsonDecoder.decode([Eleve].self, from: data) {
+                completion(prof)
             } else {
                 completion(nil)
             }

@@ -11,11 +11,11 @@ import Foundation
 struct Cours: Codable {
     var mailEleve: String
     var mailProf: String
-    var idMat: Int
+    var idMat: String
     var matiere: String
-    var idNiveau: Int
+    var idNiveau: String
     var niveau: String
-    var dateCours: Date
+    var dateCours: String
     var etat: String
     
     enum CodingKeys: String, CodingKey {
@@ -34,11 +34,11 @@ struct Cours: Codable {
         
         self.mailEleve = try valueContainer.decode(String.self, forKey: CodingKeys.mailEleve)
         self.mailProf = try valueContainer.decode(String.self, forKey: CodingKeys.mailProf)
-        self.idMat = try valueContainer.decode(Int.self, forKey: CodingKeys.idMat)
+        self.idMat = try valueContainer.decode(String.self, forKey: CodingKeys.idMat)
         self.matiere = try valueContainer.decode(String.self, forKey: CodingKeys.matiere)
-        self.idNiveau = try valueContainer.decode(Int.self, forKey: CodingKeys.idNiveau)
+        self.idNiveau = try valueContainer.decode(String.self, forKey: CodingKeys.idNiveau)
         self.niveau = try valueContainer.decode(String.self, forKey: CodingKeys.niveau)
-        self.dateCours = try valueContainer.decode(Date.self, forKey: CodingKeys.dateCours)
+        self.dateCours = try valueContainer.decode(String.self, forKey: CodingKeys.dateCours)
         self.etat = try valueContainer.decode(String.self, forKey: CodingKeys.etat)
     }
 }

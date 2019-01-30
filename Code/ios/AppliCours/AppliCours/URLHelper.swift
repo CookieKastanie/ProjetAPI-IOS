@@ -8,6 +8,29 @@
 
 import Foundation
 
+class URlHelper: NSObject {
+    let api = "http://www-etu.iut-bm.univ-fcomte.fr/~vramouss/Code/api/"
+    var objet: String
+    var methode: String
+    
+    init(objet: String, methode:String) {
+        self.objet = objet
+        self.methode = methode
+    }
+    
+    func getURL() -> URL {
+        return URL(string: api + objet + "/" + methode + ".php")!
+    }
+    
+    func setObjet(objet: String){
+        self.objet = objet
+    }
+    
+    func setMethode(methode: String){
+        self.methode = methode
+    }
+}
+
 extension URL {
     func withQueries(_ queries: [String: String]) -> URL? {
         
