@@ -88,6 +88,34 @@
       $this->niveau = $row['niveau'];
   }
 
+  public function read_single_eleve(){
+    // Create query
+    $query = 'SELECT
+          mailEleve,
+          mailProf,
+          '.$this->table.'.idMat,
+          '.$this->table.'.idNiveau,
+          dateCours,
+          etat,
+          MATIERES.libelle as matiere, NIVEAUX.libelle as niveau
+        FROM
+          ' . $this->table . '
+          inner join MATIERES on '.$this->table.'.idMat=MATIERES.idMat
+          inner join NIVEAUX on '.$this->table.'.idNiveau=NIVEAUX.idNiveau
+      WHERE mailEleve = ?';
+
+      //Prepare statement
+      $stmt = $this->conn->prepare($query);
+
+      // Bind ID
+      $stmt->bindParam(1, $this->mailEleve);
+
+      // Execute query
+      $stmt->execute();
+
+      return $stmt;
+  }
+
   public function create() {
     // Create Query
     $query = 'INSERT INTO ' .
