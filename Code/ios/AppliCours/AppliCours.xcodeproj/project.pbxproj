@@ -14,6 +14,8 @@
 		930C06E82201947E001BC628 /* Competences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930C06E72201947E001BC628 /* Competences.swift */; };
 		930C06EA22019495001BC628 /* Eleve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930C06E922019495001BC628 /* Eleve.swift */; };
 		930C06EE2201989E001BC628 /* URLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930C06ED2201989E001BC628 /* URLHelper.swift */; };
+		ED94AB1D220ACFDC005FB288 /* EleveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94AB1C220ACFDC005FB288 /* EleveViewController.swift */; };
+		ED94AB1F220AD08E005FB288 /* EleveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94AB1E220AD08E005FB288 /* EleveTableViewCell.swift */; };
 		EDF8075421F876D400BA236E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8075321F876D400BA236E /* AppDelegate.swift */; };
 		EDF8075621F876D400BA236E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8075521F876D400BA236E /* ViewController.swift */; };
 		EDF8075921F876D400BA236E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF8075721F876D400BA236E /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 		930C06E72201947E001BC628 /* Competences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Competences.swift; sourceTree = "<group>"; };
 		930C06E922019495001BC628 /* Eleve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eleve.swift; sourceTree = "<group>"; };
 		930C06ED2201989E001BC628 /* URLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHelper.swift; sourceTree = "<group>"; };
+		ED94AB1C220ACFDC005FB288 /* EleveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EleveViewController.swift; sourceTree = "<group>"; };
+		ED94AB1E220AD08E005FB288 /* EleveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EleveTableViewCell.swift; sourceTree = "<group>"; };
 		EDF8075021F876D400BA236E /* AppliCours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppliCours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF8075321F876D400BA236E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDF8075521F876D400BA236E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				EDF8075F21F876D600BA236E /* LaunchScreen.storyboard */,
 				EDF8076221F876D600BA236E /* Info.plist */,
 				EDF8075A21F876D400BA236E /* AppliCours.xcdatamodeld */,
+				ED94AB1C220ACFDC005FB288 /* EleveViewController.swift */,
+				ED94AB1E220AD08E005FB288 /* EleveTableViewCell.swift */,
 			);
 			path = AppliCours;
 			sourceTree = "<group>";
@@ -175,8 +181,10 @@
 				930C06EE2201989E001BC628 /* URLHelper.swift in Sources */,
 				EDF8075421F876D400BA236E /* AppDelegate.swift in Sources */,
 				930C06E022019413001BC628 /* Cours.swift in Sources */,
+				ED94AB1D220ACFDC005FB288 /* EleveViewController.swift in Sources */,
 				EDF8075C21F876D400BA236E /* AppliCours.xcdatamodeld in Sources */,
 				930C06E42201945C001BC628 /* Matieres.swift in Sources */,
+				ED94AB1F220AD08E005FB288 /* EleveTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

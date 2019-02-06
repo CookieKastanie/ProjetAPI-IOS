@@ -71,6 +71,9 @@
                                 <rect key="frame" x="195" y="601" width="180" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Eleve"/>
+                                <connections>
+                                    <segue destination="fs8-JZ-I2Z" kind="show" id="NUt-MC-1MQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+            <point key="canvasLocation" x="-7" y="33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NVV-wT-LRK">
@@ -108,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="-995" y="-969"/>
         </scene>
-        <!--View Controller-->
+        <!--Eleve View Controller-->
         <scene sceneID="91l-6v-7us">
             <objects>
-                <viewController id="fs8-JZ-I2Z" sceneMemberID="viewController">
+                <viewController id="fs8-JZ-I2Z" customClass="EleveViewController" customModule="AppliCours" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E6M-IK-dQC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,7 +139,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="73" id="xz9-u1-oQl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="73" id="xz9-u1-oQl" customClass="EleveTableViewCell" customModule="AppliCours" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xz9-u1-oQl" id="QvX-yZ-miF">
